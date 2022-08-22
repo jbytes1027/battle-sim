@@ -1,4 +1,4 @@
-# Battle Sim README
+# Battle Sim
 
 Battle sim is a chess-like automatic battlefield simulation in **C++** as a class final project to show **OOP concepts** and **C memory management**.
 
