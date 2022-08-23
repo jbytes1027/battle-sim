@@ -101,29 +101,7 @@ void Sim::UpdateGrid() {
     }
 }
 
-bool Sim::isOver() {
-    bool isLowerCaseUnitsLeft = false;
-    for (auto& unit : lowerCaseUnits) {
-        if (!unit->isDead()) isLowerCaseUnitsLeft = true;
-    }
-
-    bool isUpperCaseUnitsLeft = false;
-    for (auto& unit : upperCaseUnits) {
-        if (!unit->isDead()) isUpperCaseUnitsLeft = true;
-    }
-
-    if (!isLowerCaseUnitsLeft) {
-        printf("The Upper Case was victorious!\n");
-        return true;
-    }
-
-    if (!isUpperCaseUnitsLeft) {
-        printf("The Lower Case was victorious!\n");
-        return true;
-    }
-
-    return false;
-}
+bool Sim::isOver() { return isComplete; }
 
 void Sim::add(Unit* unit) {
     if (unit->isUpperCase())
@@ -133,6 +111,8 @@ void Sim::add(Unit* unit) {
 }
 
 void Sim::forward() {
+    if (isComplete) return;
+
     day++;
     printf("\n[turn] %i\n", day);
 
@@ -147,6 +127,27 @@ void Sim::forward() {
 
         ++*allUnits[i];
         allUnits.erase(allUnits.begin() + i);
+    }
+
+    // check if is over
+    bool isLowerCaseUnitsLeft = false;
+    for (auto& unit : lowerCaseUnits) {
+        if (!unit->isDead()) isLowerCaseUnitsLeft = true;
+    }
+
+    bool isUpperCaseUnitsLeft = false;
+    for (auto& unit : upperCaseUnits) {
+        if (!unit->isDead()) isUpperCaseUnitsLeft = true;
+    }
+
+    if (!isLowerCaseUnitsLeft) {
+        printf("The Upper Case was victorious!\n");
+        isComplete = true;
+    }
+
+    if (!isUpperCaseUnitsLeft) {
+        printf("The Lower Case was victorious!\n");
+        isComplete = true;
     }
 }
 

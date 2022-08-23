@@ -17,6 +17,7 @@ class Sim : public World {
     std::mt19937 randGen;
     vector<Unit*> lowerCaseUnits;
     vector<Unit*> upperCaseUnits;
+    bool isComplete = false;
 
     void UpdateGrid();
     void initGrid();
@@ -29,7 +30,7 @@ class Sim : public World {
     static const char RIDER_LETTER = 'r';
     static const char NONE_SYMBOL = '.';
 
-    explicit Sim(int seed = std::random_device{} ());
+    explicit Sim(int seed = std::random_device{}());
     ~Sim();
     bool isOver();
     bool isEmpty(int x, int y);
