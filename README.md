@@ -4,7 +4,11 @@ Battle sim is a chess-like automatic battlefield simulation in **C++** as a clas
 
 ## Gameplay Overview
 
-There are two sides, upper case and lower case, units in the upper case army are distinguishable by being upper case and units in the lower case army are lower case. **To start**, each army is created semi-randomly with each type of unit is lined up in its own row but each row has a semi-random number of units. In every simulation iteration, every unit takes a turn in a random order. There are four types of units Archers, Infantry, Calvery and Riders. A unit's turn consists of moving and attacking. Attacks are probability based and depend on what type of unit is being attacked - the higher a unit's defense is, the less likely the attack is to land. **The sim ends** when all the units on one side have died. 
+There are two sides, upper case and lower case, units in the upper case army are distinguishable by being upper case and units in the lower case army are lower case. **To start**, each army is created semi-randomly with each type of unit is lined up in its own row but each row has a semi-random number of units. In every simulation iteration, every unit takes a turn in a random order. There are four types of units Archers, Infantry, Calvery and Riders. A unit's turn consists of moving and attacking. Attacks are probability based and depend on what type of unit is being attacked - the higher a unit's defense is, the less likely the attack is to land. **The sim ends** when all the units on one side have died.
+
+## Example Battle
+
+!()[https://github.com/jbytes1027/battle-sim/blob/492c2bce1968c1cacc3d2e1d050029f7da6e8f26/Running%20Example.gif]
 
 ## Gameplay rules
 
