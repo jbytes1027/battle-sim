@@ -8,7 +8,7 @@ There are two sides, upper case and lower case, units in the upper case army are
 
 ## Example Battle
 
-!()[https://github.com/jbytes1027/battle-sim/blob/492c2bce1968c1cacc3d2e1d050029f7da6e8f26/Running%20Example.gif]
+![](https://github.com/jbytes1027/battle-sim/raw/492c2bce1968c1cacc3d2e1d050029f7da6e8f26/Running%20Example.gif)
 
 ## Gameplay rules
 
